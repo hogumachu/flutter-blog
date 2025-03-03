@@ -1,5 +1,5 @@
-name: flutter_blog
-description: "Flutter blog"
+name: design_system
+description: "Blog design system module."
 publish_to: 'none'
 version: 0.1.0
 
@@ -10,8 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
-  design-system:
-    path: lib/packages/design_system
 
 dev_dependencies:
   flutter_test:
