@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
-  design-system:
+  design_system:
     path: lib/packages/design_system
 
 dev_dependencies:
