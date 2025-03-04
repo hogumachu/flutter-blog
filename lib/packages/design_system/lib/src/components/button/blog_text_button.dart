@@ -15,15 +15,16 @@ class BlogTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: onTap,
       child: HoverWidget(
         style: HoverStyle(
-          backgroundColor: Colors.black.withAlpha(10),
+          backgroundColor: colorScheme.surface,
           borderRadius: const BorderRadius.all(Radius.circular(16)),
           contentMargin: const EdgeInsets.all(16),
-          hoverColor: Colors.black.withAlpha(30),
+          hoverColor: colorScheme.surface.withValues(alpha: 3),
         ),
         builder: (context, onHover) => _render(context, onHover),
       ),

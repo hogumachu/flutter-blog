@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/packages/design_system/lib/src/themes/material_theme.dart';
+import 'package:home/home.dart';
 
 abstract class Bootstrap {
   Widget launch();
@@ -16,6 +18,18 @@ class BlogApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final lightScheme = MaterialTheme.lightScheme();
+    final darkScheme = MaterialTheme.darkScheme();
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: lightScheme.toColorScheme(),
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData(
+        colorScheme: darkScheme.toColorScheme(),
+        useMaterial3: true,
+      ),
+      home: HomeScreen(),
+    );
   }
 }

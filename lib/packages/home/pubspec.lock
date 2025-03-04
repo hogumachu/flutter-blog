@@ -52,7 +52,7 @@ packages:
   design_system:
     dependency: "direct main"
     description:
-      path: "lib/packages/design_system"
+      path: "../design_system"
       relative: true
     source: path
     version: "0.1.0"
@@ -90,13 +90,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  home:
-    dependency: "direct main"
-    description:
-      path: "lib/packages/home"
-      relative: true
-    source: path
-    version: "0.1.0"
   leak_tracker:
     dependency: transitive
     description:

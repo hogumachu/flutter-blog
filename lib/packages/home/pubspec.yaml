@@ -1,5 +1,5 @@
-name: flutter_blog
-description: "Flutter blog"
+name: home
+description: "Blog home module."
 publish_to: 'none'
 version: 0.1.0
 
@@ -11,9 +11,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.0
   design_system:
-    path: lib/packages/design_system
-  home:
-    path: lib/packages/home
+    path: ../design_system
 
 dev_dependencies:
   flutter_test:
