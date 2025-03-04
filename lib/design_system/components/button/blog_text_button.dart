@@ -23,7 +23,7 @@ class BlogTextButton extends StatelessWidget {
         style: HoverStyle(
           backgroundColor: colorScheme.surfaceContainerHigh,
           borderRadius: const BorderRadius.all(Radius.circular(16)),
-          contentMargin: const EdgeInsets.all(16),
+          contentMargin: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
           hoverColor: colorScheme.surfaceContainerHighest,
         ),
         builder: (context, onHover) => _render(context, onHover),
