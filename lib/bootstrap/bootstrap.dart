@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/design_system/themes/material_theme.dart';
+import 'package:flutter_blog/design_system/themes/util.dart';
 import 'package:flutter_blog/home/home_page.dart';
 
 abstract class Bootstrap {
@@ -18,17 +19,12 @@ class BlogApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lightScheme = MaterialTheme.lightScheme();
-    final darkScheme = MaterialTheme.darkScheme();
+    final brightness = View.of(context).platformDispatcher.platformBrightness;
+    TextTheme textTheme =
+        createTextTheme(context, "Noto Sans KR", "Noto Sans KR");
+    MaterialTheme theme = MaterialTheme(textTheme);
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: lightScheme.toColorScheme(),
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData(
-        colorScheme: darkScheme.toColorScheme(),
-        useMaterial3: true,
-      ),
+      theme: brightness == Brightness.light ? theme.light() : theme.dark(),
       home: HomeScreen(),
     );
   }

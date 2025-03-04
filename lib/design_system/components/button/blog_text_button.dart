@@ -21,10 +21,10 @@ class BlogTextButton extends StatelessWidget {
       onTap: onTap,
       child: HoverWidget(
         style: HoverStyle(
-          backgroundColor: colorScheme.surface,
+          backgroundColor: colorScheme.surfaceContainerHigh,
           borderRadius: const BorderRadius.all(Radius.circular(16)),
           contentMargin: const EdgeInsets.all(16),
-          hoverColor: colorScheme.surface.withValues(alpha: 3),
+          hoverColor: colorScheme.surfaceContainerHighest,
         ),
         builder: (context, onHover) => _render(context, onHover),
       ),
