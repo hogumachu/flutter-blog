@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog/packages/design_system/lib/src/themes/material_theme.dart';
-import 'package:home/home.dart';
+import 'package:flutter_blog/design_system/themes/material_theme.dart';
+import 'package:flutter_blog/home/home_page.dart';
 
 abstract class Bootstrap {
   Widget launch();

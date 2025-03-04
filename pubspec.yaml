@@ -10,10 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
-  design_system:
-    path: lib/packages/design_system
-  home:
-    path: lib/packages/home
 
 dev_dependencies:
   flutter_test:
