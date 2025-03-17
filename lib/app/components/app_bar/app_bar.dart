@@ -7,14 +7,23 @@ class AppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        _AppLogo(),
-        Spacer(),
-        if (context.isDesktop) HorizonAppBarMenu(),
-        Spacer(),
-        if (!context.isDesktop) DrawerAppBarMenu(),
-      ],
+    return Container(
+      alignment: Alignment.center,
+      color: context.theme.appBarTheme.backgroundColor,
+      height: context.inset.appBarHeight,
+      padding: EdgeInsets.symmetric(horizontal: context.inset.padding),
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxHeight: ConstantInset.maxWidth),
+        child: Row(
+          children: [
+            _AppLogo(),
+            Spacer(),
+            if (context.isDesktop) HorizonAppBarMenu(),
+            Spacer(),
+            if (!context.isDesktop) DrawerAppBarMenu(),
+          ],
+        ),
+      ),
     );
   }
 }
