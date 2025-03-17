@@ -20,6 +20,8 @@ extension StyledContext on BuildContext {
     return FormFactor.desktop;
   }
 
+  bool get isDesktop => formFactor == FormFactor.desktop;
+
   AppTextStyle get textStyle {
     switch (formFactor) {
       case FormFactor.mobile:
