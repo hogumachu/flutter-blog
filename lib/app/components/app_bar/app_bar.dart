@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blog/app/components/app_bar/app_bar_menu.dart';
 import 'package:flutter_blog/design_system/styled_context.dart';
 
-class AppBar extends StatelessWidget {
-  const AppBar({super.key});
+class BlogAppBar extends StatelessWidget {
+  const BlogAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

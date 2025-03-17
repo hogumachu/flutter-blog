@@ -4,13 +4,13 @@ import 'package:flutter_blog/features/home/presentation/home_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 abstract class Bootstrap {
-  Widget launch();
+  void launch();
 }
 
 class BlogBootstrap implements Bootstrap {
   @override
-  Widget launch() {
-    return BlogApp();
+  void launch() {
+    return runApp(ProviderScope(child: BlogApp()));
   }
 }
 
@@ -21,7 +21,7 @@ class BlogApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(appThemeControllerProvider);
     return MaterialApp(
-      home: HomeScreen(),
+      home: HomePage(),
       themeMode: theme.value,
     );
   }
