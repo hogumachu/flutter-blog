@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/app/shared/app_theme_controller.dart';
+import 'package:flutter_blog/design_system/themes/app_theme.dart';
 import 'package:flutter_blog/features/home/presentation/home_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -21,8 +22,9 @@ class BlogApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(appThemeControllerProvider);
     return MaterialApp(
-      home: HomePage(),
+      darkTheme: AppTheme().dark(context),
       themeMode: theme.value,
+      home: HomePage(),
     );
   }
 }
