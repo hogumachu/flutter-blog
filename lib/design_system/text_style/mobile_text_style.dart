@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog/app/text_style/app_text_style.dart';
+import 'package:flutter_blog/design_system/text_style/app_text_style.dart';
 
 class MobileTextStyle extends AppTextStyle {
   @override

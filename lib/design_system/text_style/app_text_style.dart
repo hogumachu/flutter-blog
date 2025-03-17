@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+export 'desktop_text_style.dart';
+export 'mobile_text_style.dart';
+export 'tablet_text_style.dart';
 
 abstract class AppTextStyle {
   TextStyle get titleB;

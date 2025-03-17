@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog/app/form_factor.dart';
-import 'package:flutter_blog/app/size/app_inset.dart';
-import 'package:flutter_blog/app/text_style/app_text_style.dart';
-import 'package:flutter_blog/app/text_style/desktop_text_style.dart';
-import 'package:flutter_blog/app/text_style/mobile_text_style.dart';
-import 'package:flutter_blog/app/text_style/tablet_text_style.dart';
+import 'package:flutter_blog/design_system/form_factor.dart';
+import 'package:flutter_blog/design_system/size/app_inset.dart';
+import 'package:flutter_blog/design_system/text_style/app_text_style.dart';
+
+export 'size/app_inset.dart';
+export 'text_style/app_text_style.dart';
 
 extension StyledContext on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);
