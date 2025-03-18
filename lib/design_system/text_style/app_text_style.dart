@@ -4,6 +4,12 @@ export 'mobile_text_style.dart';
 export 'tablet_text_style.dart';
 
 abstract class AppTextStyle {
+  TextStyle get header1B;
+  TextStyle get header1SB;
+  TextStyle get header1R;
+  TextStyle get header1T;
+  TextStyle get header1L;
+
   TextStyle get titleB;
   TextStyle get titleSB;
   TextStyle get titleR;

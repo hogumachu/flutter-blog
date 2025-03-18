@@ -74,8 +74,8 @@ class _HeroImageContainerState extends State<_HeroImageContainer>
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      width: context.width / 3,
-      height: context.width / 3,
+      width: context.width / _AnimationConstant.divider(context),
+      height: context.width / _AnimationConstant.divider(context),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         boxShadow: [
@@ -99,4 +99,15 @@ class _AnimationConstant {
   static const duration = Duration(milliseconds: 600);
   static const minimumScale = 0.97;
   static const maximumScale = 1.0;
+
+  static double divider(BuildContext context) {
+    switch (context.formFactor) {
+      case FormFactor.mobile:
+        return 2;
+      case FormFactor.tablet:
+        return 2;
+      case FormFactor.desktop:
+        return 3;
+    }
+  }
 }

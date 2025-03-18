@@ -6,15 +6,8 @@ class AppTheme {
   ThemeData dark(BuildContext context) {
     return _getThemeData(
         context: context,
-        colorScheme: ColorScheme.dark(
-          primary: AppColors.primaryColor,
-          surface: AppColors.darkBackgroundColor,
-          onSurface: AppColors.gray[300]!,
-          onSurfaceVariant: AppColors.gray[400],
-          outline: AppColors.gray[800]!,
-          outlineVariant: AppColors.gray[700]!,
-          tertiary: AppColors.gray[900],
-        ),
+        colorScheme: ColorScheme.fromSeed(
+            brightness: Brightness.dark, seedColor: AppColors.primaryColor),
         elevatedButtonTextStyle: _darkElevatedButtonTextStyle(context),
         outlinedButtonTextStyle: _darkOutlinedButtonTextStyle(context),
         scaffoldBackgroundColor: AppColors.darkBackgroundColor,
@@ -25,15 +18,8 @@ class AppTheme {
   ThemeData light(BuildContext context) {
     return _getThemeData(
         context: context,
-        colorScheme: ColorScheme.light(
-          primary: AppColors.primaryColor,
-          surface: AppColors.gray[100]!,
-          onSurface: AppColors.gray[700]!,
-          onSurfaceVariant: AppColors.gray[600],
-          outline: AppColors.gray[300]!,
-          outlineVariant: AppColors.gray[400]!,
-          tertiary: AppColors.gray[900],
-        ),
+        colorScheme: ColorScheme.fromSeed(
+            brightness: Brightness.light, seedColor: AppColors.primaryColor),
         elevatedButtonTextStyle: _lightElevatedButtonTextStyle(context),
         outlinedButtonTextStyle: _lightOutlinedButtonTextStyle(context),
         scaffoldBackgroundColor: AppColors.gray[100]!,

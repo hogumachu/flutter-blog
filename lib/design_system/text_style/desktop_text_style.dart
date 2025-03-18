@@ -81,4 +81,24 @@ class DesktopTextStyle extends AppTextStyle {
   @override
   TextStyle get titleT =>
       const TextStyle(fontSize: 31, fontWeight: FontWeight.w100);
+
+  @override
+  TextStyle get header1B =>
+      const TextStyle(fontSize: 90, fontWeight: FontWeight.bold);
+
+  @override
+  TextStyle get header1L =>
+      const TextStyle(fontSize: 90, fontWeight: FontWeight.w300);
+
+  @override
+  TextStyle get header1R =>
+      const TextStyle(fontSize: 90, fontWeight: FontWeight.w400);
+
+  @override
+  TextStyle get header1SB =>
+      const TextStyle(fontSize: 90, fontWeight: FontWeight.w600);
+
+  @override
+  TextStyle get header1T =>
+      const TextStyle(fontSize: 90, fontWeight: FontWeight.w100);
 }

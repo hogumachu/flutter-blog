@@ -15,8 +15,8 @@ extension StyledContext on BuildContext {
   ColorScheme get colorScheme => theme.colorScheme;
 
   FormFactor get formFactor {
-    if (width < 600) return FormFactor.mobile;
-    if (width < 900) return FormFactor.tablet;
+    if (width < 800) return FormFactor.mobile;
+    if (width < 1200) return FormFactor.tablet;
     return FormFactor.desktop;
   }
 
