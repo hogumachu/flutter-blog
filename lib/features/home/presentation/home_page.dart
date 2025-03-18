@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blog/app/components/app_background.dart';
 import 'package:flutter_blog/app/components/app_bar/app_bar.dart';
+import 'package:flutter_blog/features/home/presentation/components/hero_image.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,8 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          const AppBackground(),
-          const Placeholder(),
+          const HeroImage(),
           const BlogAppBar(),
         ],
       ),
